@@ -180,7 +180,7 @@ qa_chain = RetrievalQA.from_chain_type(
 
 # we can now execute queries against our Q&A chain
 prompt='Revert with an elaborate answer along with the name of the file in question and the timestamp'
-result = qa_chain({'query': 'What are the main messages from the Drinking and driving video and the warehouse video ?'+prompt})
+result = qa_chain({'query': '<query>'+prompt})
 print(result['result'])
 
 
